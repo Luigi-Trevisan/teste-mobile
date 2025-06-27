@@ -1,8 +1,11 @@
 describe('Example Test', () => {
   it('should click on username field', async () => {
 //android.widget.TextView[@text="standard_user"]
-const standard_user = await $('//android.widget.TextView[@text="standard_user"]');
-await standard_user.click();
+const elemento = await $('//android.widget.EditText[@content-desc="test-Username"]');
+await elemento.setValue('standard_user');
+/* */
+const password = await $('//android.widget.EditText[@content-desc="test-Password"]');
+await password.setValue('secret_sauce');
 
 const loginInput = await $('~test-LOGIN');
 await loginInput.click();
@@ -26,6 +29,12 @@ await last_name.setValue('Doe');
 const postal_code = await $('//android.widget.EditText[@content-desc="test-Zip/Postal Code"]');
 await postal_code.setValue('69900156');
 
-//android.view.ViewGroup[@content-desc="test-CHECKOUT"]
-  });
+
+
+
+
+
+
+
+});
 });
