@@ -32,6 +32,34 @@ await postal_code.setValue('69900156');
 const click_continue = await $('//android.view.ViewGroup[@content-desc="test-CONTINUE"]');
 await click_continue.click();
 
+await driver.performActions([{
+  type: 'pointer',
+  id: 'finger1',
+  parameters: { pointerType: 'touch' },
+  actions: [
+    { type: 'pointerMove', duration: 0, x: 500, y: 1200 },
+    { type: 'pointerDown', button: 0 },
+    { type: 'pause', duration: 200 },
+    { type: 'pointerMove', duration: 500, x: 500, y: 200 },
+    { type: 'pointerUp', button: 0 }
+  ]
+}]);
+
+
+await driver.performActions([{
+  type: 'pointer',
+  id: 'finger1',
+  parameters: { pointerType: 'touch' },
+  actions: [
+    { type: 'pointerMove', duration: 0, x: 500, y: 1200 },
+    { type: 'pointerDown', button: 0 },
+    { type: 'pause', duration: 200 },
+    { type: 'pointerMove', duration: 500, x: 500, y: 200 },
+    { type: 'pointerUp', button: 0 }
+  ]
+}]);
+
+
 const click_finish = await $('//android.view.ViewGroup[@content-desc="test-FINISH"]');
 await click_finish.click();
 
