@@ -29,7 +29,11 @@ await last_name.setValue('Doe');
 const postal_code = await $('//android.widget.EditText[@content-desc="test-Zip/Postal Code"]');
 await postal_code.setValue('69900156');
 
+const click_continue = await $('//android.view.ViewGroup[@content-desc="test-CONTINUE"]');
+await click_continue.click();
 
+const click_finish = await $('//android.view.ViewGroup[@content-desc="test-FINISH"]');
+await click_finish.click();
 
 
 
